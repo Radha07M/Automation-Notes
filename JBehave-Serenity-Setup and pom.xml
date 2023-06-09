@@ -6,7 +6,8 @@ SETUP=>
 3) Apache maven 3.8.2
        MVN_HOME=C:\Program Files\apache-maven-3.8.2
        path=C:\Program Files\apache-maven-3.8.2\bin
-4) Add Extension in Eclipse. (org.jbehave.eclipse.feature_1.0.0.20140605-0717 and org.jbehave.eclipse_1.0.0.20140605-0717) add these files in eclipse/dropins folder otherwise install jbehave plugin add site in Install New software in elipcse. site: http://jbehave.org/reference/eclipse/updates/. if the installation failed then uncheck the Show latest version checkbox
+4) Add Extension in Eclipse. (org.jbehave.eclipse.feature_1.0.0.20140605-0717 and org.jbehave.eclipse_1.0.0.20140605-0717) add these files in eclipse/dropins folder 
+	otherwise install jbehave plugin add site in Install New software in elipcse. site: http://jbehave.org/reference/eclipse/updates/. if the installation failed then uncheck the Show latest version checkbox
 5) Github - install from eclipse marketplace
 6) Postman
 
