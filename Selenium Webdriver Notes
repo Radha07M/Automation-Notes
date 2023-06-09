@@ -1,0 +1,24 @@
+Q. How to instantiate chrome driver?
+=>  System.setProperty("webdriver.chrome.driver", "Chrome Driver executable location on your system"); 
+    WebDriver driver = new ChromeDriver(); //=>instantiate a Chrome browser in safe mode, with no plugins and extensions.
+    
+Q. How to instantiate firefox driver?
+=>  System.setProperty("webdriver.gecko.driver", "Gecko Driver executable location on your system"); 
+    WebDriver driver = new FirefoxDriver();
+    
+Q. What is desired capabilities?
+=>  Desired Capabilities help Selenium understand the browser details, like its name, version, and OS.
+
+Q. What are the Browser Commands?
+=> driver.get(URL)
+   String title = driver.getTitle()
+   String pageSource = driver.getPageSource()
+   String currentURL = driver.getCurrentUrl()
+   driver.close()
+   driver.quit()
+
+Q. How to Open a WebPage in Selenium?
+=> driver.get(appUrl): Load a new web page in the current browser window.
+
+Q. How to get the Title of the Webpage in Selenium?
+=> 
