@@ -1,0 +1,12 @@
+1) Create a account in github.com if you already have then login to github
+2) Install E-Git in you eclipse from marketplace.
+3) Create your project in eclipse
+4) Right click on your project and click on Team-> share project->
+     select "check box user or create repository in parent folder of project"->
+     select project -> click on create repository-> Finish
+5) Now open git repository tab and check your local repository is created
+6) Right click on your project-> Team->Add to Index-> and then commit the changes
+7) Now Go to github account and create a repository-> copy the link
+8) Right click on project->Team-> Remote-> Push-> paste the copied link-> and give username as mail id and password is your github token
+9) How to create a token?
+    => Github Profile Setting-> Developer settings-> Personal access tokens (classic)-> generate new token 
