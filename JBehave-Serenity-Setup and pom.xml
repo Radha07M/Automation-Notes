@@ -1,0 +1,89 @@
+SETUP=>
+1) Eclipse (eclipse-j11-2020-06-R-win32-x86_64)
+2) Java_1.8.0_301 (jdk-8u301-windows-x64 only) and set Java Path. always download a jdk so that it will install both jdk as well as jre
+      JAVA_HOME=C:\Program Files\Java\jdk1.8.0_301
+       path=C:\Program Files\Java\jdk1.8.0_301\bin
+3) Apache maven 3.8.2
+       MVN_HOME=C:\Program Files\apache-maven-3.8.2
+       path=C:\Program Files\apache-maven-3.8.2\bin
+4) Add Extension in Eclipse. (org.jbehave.eclipse.feature_1.0.0.20140605-0717 and org.jbehave.eclipse_1.0.0.20140605-0717) add these files in eclipse/dropins folder otherwise install jbehave plugin add site in Install New software in elipcse. site: http://jbehave.org/reference/eclipse/updates/. if the installation failed then uncheck the Show latest version checkbox
+5) Github - install from eclipse marketplace
+6) Postman
+
+for feature/story file->
+1) right click on file->open with-> other-> search jbehave editor-> OK
+2) Right click on project-> Expand jbehave-> select jbeahve scaner-> remove all values and in filter section add the package name of your steps definitions-> click on include-> apply and save
+
+
+DEPENDENCY DETAILS=>
+1) junit :  Add junit dependency
+2) serenity-core : integrate with jbehave
+3) serenity-jbehave: 2 & 3 used for adding serenity inbuild method
+4) log4j-core,log4j-api,log4j-slf4j-impl : logger
+5) json-simple : A simple Java toolkit for JSON
+6) maven-model : Model for Maven POM (Project Object Model)
+7) commons-lang
+8) assertj-core
+9) lambdaj
+10) <build>
+		<plugins>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-surefire-plugin</artifactId>
+			    <version>2.22.1</version>
+				<configuration>
+					<skip>true</skip>
+					<testFailureIgnore>true</testFailureIgnore>
+					<forkCount>0</forkCount>
+				</configuration>
+			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-failsafe-plugin</artifactId>
+			    <version>2.22.1</version>
+				<configuration>
+					<includes>
+						<include>**/*TestSuite.java</include>
+					</includes>
+					<forkCount>3</forkCount>
+					<threadCount>3</threadCount>
+					<argLine>-Xmx512m</argLine>
+					<parallel>methods</parallel>
+					<systemPropertyVariables>
+						<webdriver.driver>${webdriver.driver}</webdriver.driver>
+					</systemPropertyVariables>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>integration-test</goal>
+							<goal>verify</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-compiler-plugin</artifactId>
+			    <version>3.10.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+			    <groupId>net.serenity-bdd.maven.plugins</groupId>
+			    <artifactId>serenity-maven-plugin</artifactId>
+			    <version>${serenity.version}</version>
+				<executions>
+					<execution>
+						<id>serenity-reports</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>aggrgate</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
