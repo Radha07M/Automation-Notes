@@ -1,7 +1,21 @@
 CRS - Customer Requirement Specification
 SRS - Software Requirement Specification
+BDD - Behavior Driven Development
 RT - Release Train
 PI - Program Increment
+PR - Pull Request
+AV - AntiVirus
+QMS - Quality Management System
+ALM - Application Lifecycle Management
+LFI - Last Feature In
+RFV - Ready For Verification
+POC - Proof Of Concept
+VNV - Verification And Validation
+API - Application Programming Interface
+AWS - Amazon Web Service
+EDS - Edison Design System
+UOM - User and Org Management
+IDAM - Identification And Management
 ETA - Estimated Time of Arrival
 TDR - Technical Design Review
 FMEA - Failure Mode Effects Analysis
@@ -13,3 +27,4 @@ DRB - Design Requirements Baseline/Design Review Board/Development Review Board.
 BRB - Be Right Back
 GxP - 
 DOM - Document Object Model
+IDE - Integrated Development Environment
