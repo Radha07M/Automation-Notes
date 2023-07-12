@@ -28,3 +28,7 @@ BRB - Be Right Back
 GxP - 
 DOM - Document Object Model
 IDE - Integrated Development Environment
+
+
+Environment=>
+Dev-> Test (Dry Run)-> PRDGE (Dry Run)-> PREPROD (VNV/Staging)-> HOTFIX(Staging)-> Production(Live)
