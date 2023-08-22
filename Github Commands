@@ -1,50 +1,45 @@
 https://github.com/joshnh/Git-Commands
 
-Clone a repo=>
+#Git Configuration=>
+git config --global user.name "Radha07M"
+git config --global user.email "radha07mane@gmail.com"
+
+#Git initialization (Local repository creation so this will create .git folder in your project)=>
+git init
+
+#Git status (used to check the currect status of files in currect branch)=>
+git status
+
+#Clone a repo (Clone remote repository in your system)=>
 git clone https://github.com/Radha07M/JavaPrograms.git
 
-Switch to /Move to branch=>
-git checkout new_branch
+#Git checkout (Switch to or Move to branch)=>
+git checkout <branchName>      ---> Switch to branch
+git checkout -b <branchName>   ---> Create a new branch and switch to newly created branch
+git checkout -- <fileName>     ---> Discard the file changes
 
-Create new branch=> 
-git branch [branch name]
+#Git add (Add changes to staging area. Used to add index to the changes.)=>
+git add --all    OR      git add -A
+git add <fileName>     ---> this will add specified file to staging area
 
-================================
+#Git commit (used to add staged changes to local repository)=>
+git commit -m <Commit message>
 
-Getting & Creating Projects
-Command	Description
-git init	Initialize a local Git repository
-git clone ssh://git@github.com/[username]/[repository-name].git	Create a local copy of a remote repository
-Basic Snapshotting
-Command	Description
-git status	Check status
-git add [file-name.txt]	Add a file to the staging area
-git add -A	Add all new and changed files to the staging area
-git commit -m "[commit message]"	Commit changes
-git rm -r [file-name.txt]	Remove a file (or folder)
-Branching & Merging
-Command	Description
-git branch	List branches (the asterisk denotes the current branch)
-git branch -a	List all branches (local and remote)
-git branch [branch name]	Create a new branch
-git branch -d [branch name]	Delete a branch
-git push origin --delete [branch name]	Delete a remote branch
-git checkout -b [branch name]	Create a new branch and switch to it
-git checkout -b [branch name] origin/[branch name]	Clone a remote branch and switch to it
-git branch -m [old branch name] [new branch name]	Rename a local branch
-git checkout [branch name]	Switch to a branch
-git checkout -	Switch to the branch last checked out
-git checkout -- [file-name.txt]	Discard changes to a file
+#Git push (used to push the local repository changes to remote repository)=>
+git push origin <branchName>    ---> Push a branch to your remote repository
+git push origin                 ---> push changes to remote repository
+
+#Create new branch=> 
+git branch <branchName>       ---> Create a new branch with given name
+git branch                    ---> List the all branches. * indicates currect branch
+git branch -d <branchName>    ---> Delete a Branch
+
+#Git fetch (Fetch the changes into local repository)=>
 git merge [branch name]	Merge a branch into the active branch
 git merge [source branch] [target branch]	Merge a branch into a target branch
 git stash	Stash changes in a dirty working directory
 git stash clear	Remove all stashed entries
-Sharing & Updating Projects
-Command	Description
-git push origin [branch name]	Push a branch to your remote repository
-git push -u origin [branch name]	Push changes to remote repository (and remember the branch)
-git push	Push changes to remote repository (remembered branch)
-git push origin --delete [branch name]	Delete a remote branch
+
 git pull	Update local repository to the newest commit
 git pull origin [branch name]	Pull changes from remote repository
 git remote add origin ssh://git@github.com/[username]/[repository-name].git	Add a remote repository
