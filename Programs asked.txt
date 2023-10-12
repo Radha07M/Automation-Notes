@@ -1,0 +1,5 @@
+Q1. Write a program to swap to number without using temporary variable
+Q2. Write a program to find out duplicate words in string
+Q3. Write a program to find out occurence of charachter in string
+Q4. 
+
