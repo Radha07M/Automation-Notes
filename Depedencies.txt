@@ -1,0 +1,12 @@
+testng -> used for testng framework and inbuild methods
+selenium-java-> used for selenium framework and it inbuild methods
+commons-io-> used for FileUtils class and its methods
+json-simple-> used for creating JSON and its methods
+json-path-> used to extract JSON values and related methods
+junit->  Add junit dependency
+serenity-core-> integrate with jbehave
+serenity-jbehave-> 2 & 3 used for adding serenity inbuild method
+log4j-core,log4j-api,log4j-slf4j-impl-> logger
+maven-model-> Model for Maven POM (Project Object Model)
+rest-assured-> used to handle rest apis
+apache-poi-> used for Excel sheet methods

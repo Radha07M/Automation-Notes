@@ -1,5 +1,11 @@
 Q1. Write a program to swap to number without using temporary variable
-Q2. Write a program to find out duplicate words in string
+Q2. Write a program to swap to String without using temporary String
 Q3. Write a program to find out occurence of charachter in string
-Q4. 
+Q4. Write a program to find out duplicate words in string
+Q5. Write a program to print sum of factorial of a number
+Q6. Write a program to sort an array without inbuild method
+Q7. Write a program to reverse a string without using inbuild method
+Q8. Write a program to replace given letter with some other letter
+Q9. Write a program to find out permutation of given string
+Q10. 
 
